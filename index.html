@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aesthetic Quote Generator</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&family=Cormorant:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="particles-background" id="particles-js"></div>
+    
+    <div class="container">
+        <div class="theme-toggle">
+            <button id="themeToggle" class="theme-btn">
+                <i class="fas fa-moon"></i>
+            </button>
+        </div>
+        <div class="quote-box">
+            <div class="category-selector">
+                <select id="quoteCategory">
+                    <option value="all">All Categories</option>
+                    <option value="motivation">Motivation</option>
+                    <option value="love">Love</option>
+                    <option value="mindfulness">Mindfulness</option>
+                    <option value="wisdom">Wisdom</option>
+                </select>
+            </div>
+            
+            <div class="quote-content">
+                <p id="quote" class="quote-text"></p>
+                <p id="author" class="quote-author"></p>
+            </div>
+            
+            <div class="button-container">
+                <button id="newQuote" class="btn primary-btn">
+                    <i class="fas fa-sync-alt"></i> New Quote
+                </button>
+                <button id="copyQuote" class="btn">
+                    <i class="fas fa-copy"></i> Copy
+                </button>
+                <button id="tweetQuote" class="btn">
+                    <i class="fab fa-twitter"></i> Tweet
+                </button>
+            </div>
+        </div>
+
+        <div class="daily-quote-toggle">
+            <label class="switch">
+                <input type="checkbox" id="dailyQuoteToggle">
+                <span class="slider round"></span>
+            </label>
+            <span>Daily Quote Mode</span>
+        </div>
+
+        <div class="submit-quote">
+            <button id="showSubmitForm" class="btn">
+                <i class="fas fa-plus"></i> Submit Your Quote
+            </button>
+        </div>
+    </div>
+
+    <div id="submitQuoteModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Submit Your Quote</h2>
+            <form id="quoteSubmissionForm">
+                <textarea id="newQuoteText" placeholder="Enter your quote" required></textarea>
+                <input type="text" id="newQuoteAuthor" placeholder="Author name" required>
+                <select id="newQuoteCategory" required>
+                    <option value="">Select Category</option>
+                    <option value="motivation">Motivation</option>
+                    <option value="love">Love</option>
+                    <option value="mindfulness">Mindfulness</option>
+                    <option value="wisdom">Wisdom</option>
+                </select>
+                <button type="submit" class="btn primary-btn">Submit Quote</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="quotes.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
